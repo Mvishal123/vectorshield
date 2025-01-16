@@ -43,8 +43,10 @@ export default {
       },
       colors: {
         background: "#101010",
+        secondary: "#151515",
         "text-secondary": "#787878",
       },
+      
     },
   },
   plugins: [],

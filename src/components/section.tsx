@@ -7,7 +7,7 @@ type SectionProps = {
 
 const Section = ({ children, ...props }: SectionProps) => {
   return (
-    <div className={clsx("max-w-screen-xl mx-auto", props.className)}>{children}</div>
+    <div className={clsx("max-w-[112rem] mx-auto px-12", props.className)}>{children}</div>
   );
 };
 
