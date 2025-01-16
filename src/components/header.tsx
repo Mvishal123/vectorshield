@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Header = () => {
   return (
-    <header className="h-[6.1rem] fixed top-0 inset-x-0 px-6 bg-black/50 backdrop-blur-lg z-50">
+    <header className="h-[6.1rem] fixed top-0 inset-x-0 px-6 bg-black/10 backdrop-blur-md z-50">
       <Section className="flex items-center justify-between h-full">
         <Link href="/">
           <Image
@@ -16,11 +16,20 @@ const Header = () => {
           />
         </Link>
         <nav>
-            <ul className="text-xs flex gap-[4rem]">
-                <li> <Link href="/features">Features</Link></li>
-                <li> <Link href="/features">How it Works?</Link></li>
-                <li> <Link href="/features">Contact Us</Link></li>
-            </ul>
+          <ul className="text-xs flex gap-[4rem]">
+            <li>
+              {" "}
+              <Link href="/features">Features</Link>
+            </li>
+            <li>
+              {" "}
+              <Link href="/features">How it Works?</Link>
+            </li>
+            <li>
+              {" "}
+              <Link href="/features">Contact Us</Link>
+            </li>
+          </ul>
         </nav>
       </Section>
     </header>
