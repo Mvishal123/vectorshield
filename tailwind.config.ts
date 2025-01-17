@@ -40,6 +40,7 @@ export default {
         18: "3.6rem",
         19: "3.8rem",
         20: "4rem",
+        "section": "8rem",
       },
       colors: {
         background: "#101010",

@@ -50,8 +50,6 @@ export const WavvyPattern1 = () => (
   </svg>
 );
 
-import * as React from "react";
-
 export const WavvyPattern2 = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -86,6 +84,59 @@ export const WavvyPattern2 = () => (
     />
     <path
       d="M185.589 548.641C251.221 594.304 396.709 641.127 453.607 463.116C524.729 240.603 677.29 277.445 653.914 175.509"
+      stroke="#282828"
+    />
+  </svg>
+);
+
+export const WavvyPattern3 = () => (
+  <svg
+    width={451}
+    height={1119}
+    viewBox="0 0 451 1119"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle
+      cx={557.932}
+      cy={558.047}
+      r={165.5}
+      transform="rotate(-71.8368 557.932 558.047)"
+      stroke="#282828"
+    />
+    <circle
+      cx={557.932}
+      cy={558.051}
+      r={207}
+      transform="rotate(-73.7244 557.932 558.051)"
+      stroke="#282828"
+    />
+    <circle
+      cx={558.101}
+      cy={557.868}
+      r={124}
+      transform="rotate(-39.4272 558.101 557.868)"
+      stroke="#282828"
+    />
+    <circle
+      cx={558.21}
+      cy={557.741}
+      r={331.5}
+      transform="rotate(-41.4153 558.21 557.741)"
+      stroke="#282828"
+    />
+    <circle
+      cx={557.932}
+      cy={558.054}
+      r={290}
+      transform="rotate(-68.291 557.932 558.054)"
+      stroke="#282828"
+    />
+    <circle
+      cx={558.624}
+      cy={557.325}
+      r={248.5}
+      transform="rotate(-37.6393 558.624 557.325)"
       stroke="#282828"
     />
   </svg>
