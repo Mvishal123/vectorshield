@@ -2,6 +2,7 @@ import React from "react";
 import Section from "./section";
 import Link from "next/link";
 import Image from "next/image";
+import { Menu } from "lucide-react";
 
 const Header = () => {
   return (
@@ -15,7 +16,7 @@ const Header = () => {
             height={120}
           />
         </Link>
-        <nav>
+        <nav className="hidden md:block">
           <ul className="text-xs flex gap-[4rem]">
             <li>
               {" "}
@@ -31,6 +32,9 @@ const Header = () => {
             </li>
           </ul>
         </nav>
+        <button className="md:hidden">
+          <Menu />
+        </button>
       </Section>
     </header>
   );
