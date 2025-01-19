@@ -1,4 +1,5 @@
 import About from "@/components/about";
+import EarlyAccess from "@/components/early-access";
 import Hero from "@/components/hero";
 import How from "@/components/how";
 import Testimonials from "@/components/testimonials";
@@ -13,6 +14,7 @@ const Page = () => {
       <Why />
       <How />
       <Testimonials />
+      <EarlyAccess />
     </div>
   );
 };

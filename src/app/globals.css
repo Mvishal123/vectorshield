@@ -25,4 +25,8 @@ body {
   .text-gradient-green {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-[#8CFF00] to-[#16C528]
   }
+  
+  .text-gradient-blue-green {
+    @apply bg-clip-text text-transparent bg-gradient-to-br from-[#059FFF] to-[#1ED14B]
+  }
 }
