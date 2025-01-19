@@ -1,3 +1,4 @@
+import Footer from "@/components/footer";
 import Header from "@/components/header";
 import React from "react";
 
@@ -6,6 +7,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     <main className="">
       <Header />
       <div>{children}</div>
+      <Footer />
     </main>
   );
 };
