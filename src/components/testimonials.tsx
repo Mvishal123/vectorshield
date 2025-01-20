@@ -63,16 +63,16 @@ const Testimonials = () => {
       </div>
 
       {/* gradient */}
-      {/* <div className="absolute inset-0">
+      <div className="absolute inset-0">
         <div className="" />
-        <div className="h-full bg-gradient-to-b from-transparent via-[#76004745] to-transparent" />
-      </div> */}
+        <div className="h-full bg-gradient-to-b from-transparent via-[#76004721] to-transparent" />
+      </div>
 
       {/* patterns */}
-      <div className="absolute left-0 -top-[500px] z-10">
+      <div className="hidden md:block absolute left-0 -top-[500px] z-10">
         <WavvyPattern4 />
       </div>
-      <div className="absolute right-0 -top-[500px] z-10">
+      <div className="hidden md:block absolute right-0 -top-[500px] z-10">
         <WavvyPattern5 />
       </div>
     </div>

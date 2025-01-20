@@ -37,7 +37,7 @@ const How = () => {
       {/* Stairs image */}
       <div
         className={clsx(
-          "absolute h-[70vw] md:h-[30vw]",
+          "absolute h-[80vw] md:h-[30vw]",
           "after:content-[''] after:absolute after:inset-0 after:bg-gradient-to-b after:from-transparent after:to-background"
         )}
       >
@@ -51,7 +51,7 @@ const How = () => {
       </div>
 
       {/* Content */}
-      <Section className="relative z-20 pt-[16rem]">
+      <Section className="relative z-20 pt-[27rem] md:pt-[16rem]">
         <h1 className="text-center text-4xl">How it Works?</h1>
         <div className="mt-section">
           <div className="grid grid-cols-1 gap-15 md:grid-cols-2">
