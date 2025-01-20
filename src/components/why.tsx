@@ -55,7 +55,7 @@ const Why = () => {
       <div className="absolute max-md:-top-[340px] max-md:left-1/2 max-md:-translate-x-1/2  max-md:-rotate-90 md:right-0 md:top-1/2 md:-translate-y-1/2 z-10 ">
         <WavvyPattern3 />
       </div>
-      <div className="absolute max:md-bottom-[340px] max-md:left-1/2 max-md:-translate-x-1/2  max-md:rotate-90  md:left-0 md:rotate-180 md:top-1/2 md:-translate-y-1/2 z-10 ">
+      <div className="absolute max-md:-bottom-[340px] max-md:left-1/2 max-md:-translate-x-1/2  max-md:rotate-90  md:left-0 md:rotate-180 md:top-1/2 md:-translate-y-1/2 z-10 ">
         <WavvyPattern3 />
       </div>
     </div>

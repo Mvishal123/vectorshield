@@ -5,6 +5,7 @@ const CircularStarsIllustration = () => (
     viewBox="0 0 1227 1227"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    className="max-w-full max-h-full"
   >
     <circle
       cx={612.123}

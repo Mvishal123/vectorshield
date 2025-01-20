@@ -44,8 +44,10 @@ const Testimonials = () => {
     <div className={clsx("bg-background relative overflow-hidden")}>
       <div className="pt-section relative z-20">
         <div className="text-center">
-          <h1 className="text-4xl">Trusted by AI Innovators and developers</h1>
-          <p className="text-[#745C6B] text-xl">
+          <h1 className="text-[2.8rem] md:text-4xl">
+            Trusted by AI Innovators and developers
+          </h1>
+          <p className="text-[#745C6B] text-sm md:text-xl">
             We protect your AI stack so that you can focus on
             <br />
             building intelligence while we take care of rest
@@ -80,7 +82,7 @@ const Testimonials = () => {
 export default Testimonials;
 
 const TestmonialCard = ({ testimonial }: { testimonial: TestimonialType }) => (
-  <div className="bg-[#2B0F20] flex-shrink-0 p-20 max-w-[600px] w-full rounded-[3.2rem] flex flex-col">
+  <div className="bg-[#2B0F20] flex-shrink-0 p-20 md:max-w-[600px] w-full rounded-[3.2rem] flex flex-col">
     <div>
       <Image
         src={InvertedCommas}

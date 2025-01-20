@@ -13,9 +13,11 @@ const EarlyAccess = () => {
   const isDisabled = !email || !company;
   return (
     <div className="bg-background relative overflow-hidden">
-      <Section className="py-[18rem]">
-        <h1 className="text-3xl text-gradient-blue-green ">Be the early to secure your AI-driven future</h1>
-        <div className="flex flex-col mt-10 gap-5">
+      <Section className="py-[18rem] relative z-20">
+        <h1 className="text-center text-3xl md:text-start text-gradient-blue-green ">
+          Be the early to secure <br className="md:hidden"/> your AI-driven future
+        </h1>
+        <div className="flex flex-col mt-[20rem] md:mt-10 gap-5 max-w-[48rem]">
           <Input
             placeholder="Enter email address"
             value={email}
@@ -27,18 +29,18 @@ const EarlyAccess = () => {
             onChange={(e) => setCompany((e.target as HTMLInputElement).value)}
           />
         </div>
-        <p className="text-xs text-[#5C5C5C] mt-2">
+        <p className="text-xs text-center md:text-start text-[#5C5C5C] mt-2">
           We respect your privacy and will never share your information
         </p>
-        <div className="mt-[4.5rem]">
+        <div className="mt-[4.5rem] flex justify-center h-[5rem]">
           <Button variant="primary" size={"big"} disabled={isDisabled}>
-            Get Early Access
+            Get Free Early Access
           </Button>
         </div>
       </Section>
 
       {/* Pattern */}
-      <div className="absolute -right-[400px] -bottom-[400px] z-10">
+      <div className="absolute  -right-[400px] bottom-0 md:-bottom-[400px] z-10">
         <CircularStarsIllustration />
       </div>
     </div>
