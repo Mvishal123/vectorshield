@@ -74,8 +74,8 @@ const WhyCard = ({
   return (
     <div className="overflow-hidden bg-background p-20 rounded-[3.2rem] relative">
       <Icon />
-      <h2 className="text-2xl text-[#C4C4C4] mt-12">{title}</h2>
-      <p className="text-lg text-text-secondary mt-4 ">{description}</p>
+      <h2 className="text-lg md:text-2xl text-[#C4C4C4] mt-12">{title}</h2>
+      <p className="text-sm md:text-lg text-text-secondary mt-4 ">{description}</p>
 
       {/* index */}
       <div className=" absolute -top-10 -right-10 rounded-full border size-[12rem] flex items-center justify-center text-text-secondary border-text-secondary/20 text-3xl p-3">

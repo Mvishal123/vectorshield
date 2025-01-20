@@ -7,7 +7,7 @@ const About = () => (
   <div className="bg-background">
     <Section className="w-full py-[8rem] grid grid-cols-1 md:grid-cols-2 gap-20">
       <div className="flex-shrink-0  grid-card shadow-inner shadow-white/10 relative overflow-hidden">
-        <div className="mt-[15rem]">
+        <div className="mt-[15rem] relative z-10">
           <div className="text-[8rem] md:text-[12rem] font-medium">84%</div>
           <p className="text-md md:text-xl relative text-text-secondary">
             Businesses see security as a major roadblock to{" "}
