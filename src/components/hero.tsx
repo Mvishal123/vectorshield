@@ -9,12 +9,12 @@ const Hero = () => {
   return (
     <>
       <Section className="relative">
-        <div className="text-center mt-[18.4rem]">
-          <h1 className="text-6xl font-light">
+        <div className="relative z-10 text-center mt-[18.4rem]">
+          <h1 className="text-[3.6rem] md:text-6xl font-light">
             The Security Layer <br />
             For AI Applications
           </h1>
-          <p className="text-text-secondary mt-5">
+          <p className="text-xs text-text-secondary mt-5">
             Secure your systems with AI security from the start <br /> Deploy in
             minutes, not months
           </p>
@@ -37,9 +37,8 @@ const Hero = () => {
         {/* hero image */}
         <div
           className={clsx(
-            "absolute top-0 left-0 right-0 -z-10",
-            "before:absolute before:top-0 before:inset-x-0 before:h-1/2 before:bg-gradient-to-t before:from-transparent before:to-black",
-            "after:absolute after:bottom-0 after:inset-x-0 after:h-1/2 after:bg-gradient-to-b after:from-transparent after:to-black"
+            "absolute top-[18rem] md:top-0 left-0 right-0 -z-10 overflow-hidden",
+            "after:absolute   after:inset-[-5rem] md:after:inset-0 after:bg-gradient-to-b after:from-black after:via-transparent after:to-black "
           )}
         >
           <Image
@@ -47,12 +46,12 @@ const Hero = () => {
             alt="hero-image"
             width={1440}
             height={770}
-            className=""
+            className="object-cover scale-150 md:scale-125"
           />
         </div>
       </Section>
-      <div className="flex overflow-hidden mt-[20vw] font-light bg-white/10">
-        <div className="text-lg text-nowrap  flex items-center gap-12 py-10 mr-12">
+      <div className="flex overflow-hidden mt-[60vw] md:mt-[20vw] font-light bg-white/10 relative z-0">
+        <div className="text-md md:text-lg text-nowrap  flex items-center gap-12 py-10 mr-12">
           <span>Advanced</span>
           <span>•</span>
           <span>Enterprise Grade</span>
