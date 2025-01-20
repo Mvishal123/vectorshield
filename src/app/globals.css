@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-size: 62.5%;
+}
+
+
+body {
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 1.6rem;
+  @apply bg-black text-white
+}
+
+@layer utilities {
+  .grid-card {
+    @apply shadow-[inset_0px_4px_8px_5px_rgba(255,_255,_255,_2%)] bg-secondary rounded-[3.2rem] p-[5rem]
+  }
+
+  .text-gradient-orange {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#FFBB00] to-[#FF6600]
+  }
+
+  .text-gradient-green {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#8CFF00] to-[#16C528]
+  }
+  
+  .text-gradient-blue-green {
+    @apply bg-clip-text text-transparent bg-gradient-to-br from-[#059FFF] to-[#1ED14B]
+  }
+}
