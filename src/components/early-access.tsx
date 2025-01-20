@@ -32,7 +32,7 @@ const EarlyAccess = () => {
         <p className="text-xs text-center md:text-start text-[#5C5C5C] mt-2">
           We respect your privacy and will never share your information
         </p>
-        <div className="mt-[4.5rem] flex justify-center h-[5rem]">
+        <div className="mt-[4.5rem] flex justify-center md:justify-start h-[5rem]">
           <Button variant="primary" size={"big"} disabled={isDisabled}>
             Get Free Early Access
           </Button>

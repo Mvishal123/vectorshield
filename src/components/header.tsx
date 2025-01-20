@@ -1,12 +1,31 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
 import Section from "./section";
 import Link from "next/link";
 import Image from "next/image";
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import clsx from "clsx";
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(true);
+
+  const toggleMenu = () => {
+    setIsOpen((prev) => !prev);
+  };
+
+  const resizeListener = () => setIsOpen(false);
+
+  useEffect(() => {
+    window.addEventListener("resize", resizeListener);
+
+    return () => {
+      window.removeEventListener("resize", resizeListener);
+    };
+  }, []);
+
   return (
-    <header className="h-[6.1rem] fixed top-0 inset-x-0 px-6 bg-black/10 backdrop-blur-md z-50">
+    <header className="h-header fixed top-0 inset-x-0 px-6 bg-black/10 backdrop-blur-md z-50">
       <Section className="flex items-center justify-between h-full">
         <Link href="/">
           <Image
@@ -16,8 +35,13 @@ const Header = () => {
             height={120}
           />
         </Link>
-        <nav className="hidden md:block">
-          <ul className="text-xs flex gap-[4rem]">
+        <nav className="fixed inset-0 md:relative">
+          <ul
+            className={clsx(
+              "text-xs flex-col text-center max-md:py-20 max-md:text-background max-md:font-light space-y-[4rem] md:space-y-0 md:text-start md:flex-row md:flex gap-[4rem]",
+              isOpen ? "inset-0 bg-white" : "hidden"
+            )}
+          >
             <li>
               {" "}
               <Link href="/features">Features</Link>
@@ -30,9 +54,12 @@ const Header = () => {
               {" "}
               <Link href="/features">Contact Us</Link>
             </li>
+            <button className="md:hidden" onClick={toggleMenu}>
+              <X strokeWidth={2} />{" "}
+            </button>
           </ul>
         </nav>
-        <button className="md:hidden">
+        <button className="z-10 md:hidden" onClick={toggleMenu}>
           <Menu />
         </button>
       </Section>
