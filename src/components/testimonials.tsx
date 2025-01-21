@@ -54,8 +54,8 @@ const Testimonials = () => {
           </p>
         </div>
         <div className="mt-section">
-          <div className="flex items-center gap-10 -translate-x-[8rem]">
-            {TESTIMONIALS.map((testimonial, index) => (
+          <div className="flex items-center gap-10 animate-infinite-scroll-testimonials [--speed:40s] ">
+            {[...TESTIMONIALS, ...TESTIMONIALS, ...TESTIMONIALS].map((testimonial, index) => (
               <TestmonialCard key={index} testimonial={testimonial} />
             ))}
           </div>

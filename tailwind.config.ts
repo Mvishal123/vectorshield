@@ -1,3 +1,4 @@
+import { transform } from "next/dist/build/swc/generated-native";
 import type { Config } from "tailwindcss";
 
 export default {
@@ -40,15 +41,29 @@ export default {
         18: "3.6rem",
         19: "3.8rem",
         20: "4rem",
-        "section": "8rem",
-        "header": "6.1rem"
+        section: "8rem",
+        header: "6.1rem",
       },
       colors: {
         background: "#101010",
         secondary: "#151515",
         "text-secondary": "#787878",
       },
-      
+      keyframes: {
+        "infinite-scroll-text": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(calc(-40%))" },
+        },
+        "infinite-scroll-testimonials": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-200%)" },
+        },
+      },
+
+      animation: {
+        "infinite-scroll-text": "infinite-scroll-text var(--speed) linear infinite",
+        "infinite-scroll-testimonials": "infinite-scroll-testimonials var(--speed) linear infinite",
+      }
     },
   },
   plugins: [],

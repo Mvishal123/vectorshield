@@ -6,9 +6,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import clsx from "clsx";
+import VectorShieldLogoFullWhite from "./logo";
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen((prev) => !prev);
@@ -28,18 +29,15 @@ const Header = () => {
     <header className="h-header fixed top-0 inset-x-0 px-6 bg-black/10 backdrop-blur-md z-50">
       <Section className="flex items-center justify-between h-full">
         <Link href="/">
-          <Image
-            src="/svg/logo-full.svg"
-            alt="Vectorshield-logo"
-            width={120}
-            height={120}
-          />
+          <VectorShieldLogoFullWhite />
         </Link>
         <nav className="fixed inset-0 md:relative">
           <ul
             className={clsx(
-              "text-xs flex-col text-center max-md:py-20 max-md:text-background max-md:font-light space-y-[4rem] md:space-y-0 md:text-start md:flex-row md:flex gap-[4rem]",
-              isOpen ? "inset-0 bg-white" : "hidden"
+              "text-xs flex-col text-center  md:text-start md:flex-row  gap-[4rem]",
+              isOpen
+                ? "inset-0 bg-white max-md:py-20 max-md:text-background max-md:font-light space-y-[4rem] md:space-y-0"
+                : "hidden md:flex"
             )}
           >
             <li>

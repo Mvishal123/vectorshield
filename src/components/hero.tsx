@@ -38,7 +38,7 @@ const Hero = () => {
         <div
           className={clsx(
             "absolute top-[18rem] md:top-0 left-0 right-0 -z-10 overflow-hidden",
-            "after:absolute   after:inset-[-5rem] md:after:inset-0 after:bg-gradient-to-b after:from-black after:via-transparent after:to-black "
+            "after:absolute after:inset-[-5rem] md:after:inset-0 after:bg-gradient-to-b after:from-black after:via-transparent after:to-black "
           )}
         >
           <Image
@@ -51,29 +51,14 @@ const Hero = () => {
         </div>
       </Section>
       <div className="flex overflow-hidden mt-[60vw] md:mt-[20vw] font-light bg-white/10 relative z-0">
-        <div className="text-md md:text-lg text-nowrap  flex items-center gap-12 py-10 mr-12">
-          <span>Advanced</span>
-          <span>•</span>
-          <span>Enterprise Grade</span>
-          <span>•</span>
-          <span>Multi-layered Security</span>
-          <span>•</span>
-          <span>Custom-centric</span>
-          <span>•</span>
-          <span>Robust encryption</span>
-          <span>•</span>
-        </div>
-        <div className="text-lg text-nowrap  flex items-center gap-12 py-10">
-          <span>Advanced</span>
-          <span>•</span>
-          <span>Enterprise Grade</span>
-          <span>•</span>
-          <span>Multi-layered Security</span>
-          <span>•</span>
-          <span>Custom-centric</span>
-          <span>•</span>
-          <span>Robust encryption</span>
-          <span>•</span>
+
+      {/* Optimize it */}
+        <div className="text-md md:text-lg text-nowrap flex items-center gap-12 py-10  animate-infinite-scroll-text [--speed:30s]">
+          {[...ROLL_TAPE_CONTENT, ...ROLL_TAPE_CONTENT, ...ROLL_TAPE_CONTENT].map(
+            (content, index) => (
+              <p key={`roll-tape-${index}`}>{content}</p>
+            )
+          )}
         </div>
       </div>
     </>
@@ -81,3 +66,16 @@ const Hero = () => {
 };
 
 export default Hero;
+
+const ROLL_TAPE_CONTENT = [
+  "Advanced",
+  "•",
+  "Enterprise Grade",
+  "•",
+  "Multi-layered Security",
+  "•",
+  "Custom-centric",
+  "•",
+  "Robust encryption",
+  "•",
+];
