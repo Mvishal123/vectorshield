@@ -50,15 +50,26 @@ const Hero = () => {
           />
         </div>
       </Section>
-      <div className="flex overflow-hidden mt-[60vw] md:mt-[20vw] font-light bg-white/10 relative z-0">
-
-      {/* Optimize it */}
-        <div className="text-md md:text-lg text-nowrap flex items-center gap-12 py-10  animate-infinite-scroll-text [--speed:30s]">
-          {[...ROLL_TAPE_CONTENT, ...ROLL_TAPE_CONTENT, ...ROLL_TAPE_CONTENT].map(
+      <div className="flex mt-[60vw] md:mt-[20vw] font-light bg-white/10 relative z-0">
+        {/* Optimize it */}
+        <div className=" flex items-center gap-10 py-10 overflow-hidden">
+          {/* {[...ROLL_TAPE_CONTENT, ...ROLL_TAPE_CONTENT, ...ROLL_TAPE_CONTENT].map(
             (content, index) => (
               <p key={`roll-tape-${index}`}>{content}</p>
             )
-          )}
+          )} */}
+          {new Array(2).fill(0).map((_, index) => (
+            <div
+              key={`roll-tape-${index}`}
+              className="flex min-w-full justify-around gap-10 animate-infinite-scroll-text [--speed:40s]"
+            >
+              {ROLL_TAPE_CONTENT.map((content, idx) => (
+                <p className="text-md md:text-lg text-nowrap" key={`roll-tape-item-${(index + 1) * idx}`}>
+                  {content}
+                </p>
+              ))}
+            </div>
+          ))}
         </div>
       </div>
     </>

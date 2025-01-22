@@ -41,7 +41,7 @@ interface TestimonialType {
 
 const Testimonials = () => {
   return (
-    <div className={clsx("bg-background relative overflow-hidden")}>
+    <div className={clsx("bg-background relative")}>
       <div className="pt-section relative z-20">
         <div className="text-center">
           <h1 className="text-[2.8rem] md:text-4xl">
@@ -54,9 +54,19 @@ const Testimonials = () => {
           </p>
         </div>
         <div className="mt-section">
-          <div className="flex items-center gap-10 animate-infinite-scroll-testimonials [--speed:40s] ">
-            {[...TESTIMONIALS, ...TESTIMONIALS, ...TESTIMONIALS].map((testimonial, index) => (
-              <TestmonialCard key={index} testimonial={testimonial} />
+          <div className="flex items-center gap-10 [--speed:40s] overflow-hidden">
+            {new Array(2).fill(0).map((_, index) => (
+              <div
+                className={`animate-infinite-scroll-testimonials flex justify-around gap-10 min-w-screen flex-shrink-0`}
+                key={`testimonial-parent-${index}`}
+              >
+                {TESTIMONIALS.map((testimonial, idx) => (
+                  <TestmonialCard
+                    key={`testimonial-${(index + 1) * idx}`}
+                    testimonial={testimonial}
+                  />
+                ))}
+              </div>
             ))}
           </div>
         </div>

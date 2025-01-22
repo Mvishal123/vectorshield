@@ -52,18 +52,20 @@ export default {
       keyframes: {
         "infinite-scroll-text": {
           "0%": { transform: "translateX(0)" },
-          "100%": { transform: "translateX(calc(-40%))" },
+          "100%": { transform: "translateX(calc(-100% - 2rem))" },
         },
         "infinite-scroll-testimonials": {
           "0%": { transform: "translateX(0)" },
-          "100%": { transform: "translateX(-200%)" },
+          "100%": { transform: "translateX(calc(-100% - 2rem))" },
         },
       },
 
       animation: {
-        "infinite-scroll-text": "infinite-scroll-text var(--speed) linear infinite",
-        "infinite-scroll-testimonials": "infinite-scroll-testimonials var(--speed) linear infinite",
-      }
+        "infinite-scroll-text":
+          "infinite-scroll-text var(--speed) linear infinite",
+        "infinite-scroll-testimonials":
+          "infinite-scroll-testimonials var(--speed) linear infinite",
+      },
     },
   },
   plugins: [],
