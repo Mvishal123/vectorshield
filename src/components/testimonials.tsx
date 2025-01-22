@@ -92,7 +92,7 @@ const Testimonials = () => {
 export default Testimonials;
 
 const TestmonialCard = ({ testimonial }: { testimonial: TestimonialType }) => (
-  <div className="bg-[#2B0F20] flex-shrink-0 p-20 md:max-w-[600px] w-full rounded-[3.2rem] flex flex-col">
+  <div className="bg-[#2B0F20] flex-shrink-0 p-20 smax-w-[500px] md:max-w-[600px] w-full rounded-[3.2rem] flex flex-col">
     <div>
       <Image
         src={InvertedCommas}
