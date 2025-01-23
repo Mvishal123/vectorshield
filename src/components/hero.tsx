@@ -29,7 +29,7 @@ const Hero = () => {
                   height={16}
                 />
               </IconWrapper>
-              Get Early Access
+              Watch Demo
             </Button>
           </div>
         </div>
